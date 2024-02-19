@@ -1,0 +1,31 @@
+---
+title: "About"
+format: html
+editor: visual
+image: sankarsh.jpg
+about: 
+   template: jolla
+   links: 
+     - text: Email       
+       icon: envelope       
+       href: mailto:sankarshgsanap@gmail.com
+     - text: Github       
+       icon: github
+       href: https://github.com/Sankarsh100
+     - text: Resume       
+       icon: file-text       
+---
+
+Welcome to my corner of the digital realm!
+
+I'm Sankarsh Govind Sanap, a passionate individual with a relentless drive to harness the power of data for transformative insights and innovation.
+
+My journey with computers began as a fascination, but it quickly evolved into a profound desire to utilize data for calculated benefits. With a solid foundation in mathematics and a major in mechanical engineering from Savitribai Phule Pune University, I've honed my analytical and critical thinking skills to excel in problem-solving.
+
+During my undergraduate studies, I delved into the world of MATLAB, realizing its versatility in solving complex engineering problems and extracting valuable insights from data. This exposure sparked my keen interest in data science, leading me to explore the intersection of machine learning and mechanical engineering.
+
+My professional journey led me to Tata Consultancy Services Limited, where I witnessed firsthand the transformative power of data in decision-making and problem-solving. However, recognizing areas where I could further develop, I've taken proactive steps to enhance my skills. From strengthening my quantitative abilities through courses like "Statistics for Data Science and Business Analysis" to embracing challenges like Natural Language Processing (NLP), I'm constantly expanding my skill set to excel in data analysis.
+
+As a Developer, I collaborate with cross-functional teams to develop data-driven solutions aimed at improving operational efficiency and outcomes. Leveraging tools like Power BI and languages like SQL, Python, and advanced Excel functions, I've conducted data analysis on large-scale healthcare datasets, identifying trends, patterns, and anomalies to drive actionable insights.
+
+Stepping into the corporate world presented its challenges, but through perseverance and mentorship, I've equipped myself with knowledge and expertise. Yet, my journey in data science has only just begun. With a deep-seated desire to delve deeper into the field, I aim to join a graduate program to excel as a competent individual in a renowned tech company.
