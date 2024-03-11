@@ -1,0 +1,78 @@
+---
+title: "Mid project code"
+editor: visual
+---
+
+```{r}
+library(dplyr)
+library(tidyverse)
+library(plotly)
+library(reshape2)
+```
+
+```{r}
+Co2_emission = read.csv('C:/Users/sanka/OneDrive/Documents/LabAssignment/CO2_emission.csv')
+```
+
+```{r}
+Co2_2021 = Co2_emission %>%
+  filter(Year == 2021) %>%
+  replace(is.na(.), 0) 
+
+top_emitters <- Co2_2021 %>% 
+  arrange(desc(Total)) %>%
+  head(20)
+```
+
+```{r}
+fig1 = plot_ly(top_emitters, x = ~Total, y = ~reorder(Country, Total), type = 'bar', orientation = 'h') %>%
+  layout(title = "Top 20 Countries by Total Emissions in 2021",
+         xaxis = list(title = "Total Emissions (MtCO2)"),
+         yaxis = list(title = "Country"))
+fig1
+```
+
+```{r}
+data_2021 <- Co2_emission %>%
+  filter(Year == 2021) %>%
+  replace(is.na(.), 0) %>%
+  arrange(desc(Total)) %>%
+  head(7)
+
+data_melted <- melt(data_2021, id.vars = c("Country", "ISO.3166.1.alpha.3", "Year", "Total"), 
+                    variable.name = "Fuel_Type", value.name = "Emissions")
+
+data_melted <- data_melted %>%
+  group_by(Country) %>%
+  mutate(Percentage = Emissions / sum(Emissions) * 100)
+
+percentage_plot <- plot_ly(data = data_melted, x = ~Country, y = ~Percentage, type = 'bar', color = ~Fuel_Type,
+                           text = ~paste0(round(Percentage, 1), "%"), textposition = 'auto',
+                           hoverinfo = 'text+x+y') %>%
+  layout(title = "Percentage of Emissions by Fuel Type in Top 7 Countries (2021)", 
+         xaxis = list(title = "Country"), 
+         yaxis = list(title = "Percentage (%)"),
+         barmode = 'stack')
+
+percentage_plot
+```
+
+```{r}
+p1 <- plot_ly(data = data_melted, x = ~Country, y = ~Emissions, color = ~Fuel_Type, type = 'bar', 
+              marker = list(line = list(width = 1))) %>%
+  layout(title = "Emissions by Fuel Type in Top 7 Countries (2021)", 
+         xaxis = list(title = "Country"), 
+         yaxis = list(title = "Emissions (MtCO2)"),
+         barmode = 'group',
+         showlegend = TRUE 
+         ,
+         transforms = list(
+           list(
+             type = 'groupby',
+             groups = ~Fuel_Type
+           )
+         )
+  )
+p1
+
+```
