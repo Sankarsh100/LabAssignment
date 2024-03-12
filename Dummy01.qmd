@@ -1,5 +1,6 @@
 ---
 title: "Dummy01"
+format: html
 ---
 
-This is Dummy Page. Thank you!!
+This is Dummy Page.

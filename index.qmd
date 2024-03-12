@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Sankarsh Govind Sanap"
 format: html
 editor: visual
 image: sankarsh.jpg
