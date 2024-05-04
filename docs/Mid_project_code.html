@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -79,7 +79,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -88,19 +94,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
 <script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+
 <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+
 <link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
 <script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
 <link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
 <script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -110,9 +125,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Sankarsh Govind Sanap</span>
     </a>
@@ -124,25 +139,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Sankarsh Govind Sanap</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">Dummy</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">Dummy</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Dummy01.html" rel="" target="">
- <span class="menu-text">Dummy01</span></a>
+    <a class="nav-link" href="./Dummy01.html"> 
+<span class="menu-text">Dummy01</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Mid_Project.html" rel="" target="">
- <span class="menu-text">Mid Project</span></a>
+    <a class="nav-link" href="./Mid_Project.html"> 
+<span class="menu-text">Mid Project</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./#projects"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#blog"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#contact"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -171,7 +200,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -191,9 +222,12 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.3.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ forcats   1.0.0     ✔ readr     2.1.5
-✔ ggplot2   3.4.4     ✔ stringr   1.5.1
+✔ ggplot2   3.5.0     ✔ stringr   1.5.1
 ✔ lubridate 1.9.3     ✔ tibble    3.2.1
 ✔ purrr     1.0.2     ✔ tidyr     1.3.1</code></pre>
 </div>
@@ -203,7 +237,7 @@ Attaching package: 'dplyr'</code></pre>
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'plotly'
@@ -220,7 +254,7 @@ The following object is masked from 'package:graphics':
 
     layout</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'reshape2'
@@ -231,81 +265,81 @@ The following object is masked from 'package:tidyr':
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Co2_emission <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/sanka/OneDrive/Documents/LabAssignment/CO2_emission.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Co2_emission <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">'C:/Users/sanka/OneDrive/Documents/LabAssignment/CO2_emission.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Co2_2021 <span class="ot">=</span> Co2_emission <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2021</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">replace</span>(<span class="fu">is.na</span>(.), <span class="dv">0</span>) </span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>top_emitters <span class="ot">&lt;-</span> Co2_2021 <span class="sc">%&gt;%</span> </span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Total)) <span class="sc">%&gt;%</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Co2_2021 <span class="ot">=</span> Co2_emission <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2021</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">replace</span>(<span class="fu">is.na</span>(.), <span class="dv">0</span>) </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>top_emitters <span class="ot">&lt;-</span> Co2_2021 <span class="sc">%&gt;%</span> </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Total)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fig1 <span class="ot">=</span> <span class="fu">plot_ly</span>(top_emitters, <span class="at">x =</span> <span class="sc">~</span>Total, <span class="at">y =</span> <span class="sc">~</span><span class="fu">reorder</span>(Country, Total), <span class="at">type =</span> <span class="st">'bar'</span>, <span class="at">orientation =</span> <span class="st">'h'</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">title =</span> <span class="st">"Top 20 Countries by Total Emissions in 2021"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Total Emissions (MtCO2)"</span>),</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Country"</span>))</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>fig1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fig1 <span class="ot">=</span> <span class="fu">plot_ly</span>(top_emitters, <span class="at">x =</span> <span class="sc">~</span>Total, <span class="at">y =</span> <span class="sc">~</span><span class="fu">reorder</span>(Country, Total), <span class="at">type =</span> <span class="st">'bar'</span>, <span class="at">orientation =</span> <span class="st">'h'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">title =</span> <span class="st">"Top 20 Countries by Total Emissions in 2021"</span>,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Total Emissions (MtCO2)"</span>),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Country"</span>))</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>fig1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-9e7003efd58f9cc80324" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-9e7003efd58f9cc80324">{"x":{"visdat":{"3e503c1170c7":["function () ","plotlyVisDat"]},"cur_data":"3e503c1170c7","attrs":{"3e503c1170c7":{"x":{},"y":{},"orientation":"h","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Top 20 Countries by Total Emissions in 2021","xaxis":{"domain":[0,1],"automargin":true,"title":"Total Emissions (MtCO2)"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Country","type":"category","categoryorder":"array","categoryarray":["Italy","United Kingdom","Australia","Mexico","South Africa","Turkey","Brazil","Canada","South Korea","Indonesia","Saudi Arabia","Germany","Iran","International Transport","Japan","Russia","India","USA","China","Global"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[37123.850352000001,11472.369171,5007.335889,2709.6836250000001,1755.54739,1067.3984350000001,1021.749204,748.87875199999996,674.75356599999998,672.37986999999998,619.27753299999995,616.07499600000006,545.63451699999996,488.88107000000002,446.204185,435.928899,407.205037,391.187411,346.77318100000002,328.68732],"y":["Global","China","USA","India","Russia","Japan","International Transport","Iran","Germany","Saudi Arabia","Indonesia","South Korea","Canada","Brazil","Turkey","South Africa","Mexico","Australia","United Kingdom","Italy"],"orientation":"h","type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-a0885d8d97863ca04c4d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-a0885d8d97863ca04c4d">{"x":{"visdat":{"372429ad49c5":["function () ","plotlyVisDat"]},"cur_data":"372429ad49c5","attrs":{"372429ad49c5":{"x":{},"y":{},"orientation":"h","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Top 20 Countries by Total Emissions in 2021","xaxis":{"domain":[0,1],"automargin":true,"title":"Total Emissions (MtCO2)"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Country","type":"category","categoryorder":"array","categoryarray":["Italy","United Kingdom","Australia","Mexico","South Africa","Turkey","Brazil","Canada","South Korea","Indonesia","Saudi Arabia","Germany","Iran","International Transport","Japan","Russia","India","USA","China","Global"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[37123.850352000001,11472.369171,5007.335889,2709.6836250000001,1755.54739,1067.3984350000001,1021.749204,748.87875199999996,674.75356599999998,672.37986999999998,619.27753299999995,616.07499600000006,545.63451699999996,488.88107000000002,446.204185,435.928899,407.205037,391.187411,346.77318100000002,328.68732],"y":["Global","China","USA","India","Russia","Japan","International Transport","Iran","Germany","Saudi Arabia","Indonesia","South Korea","Canada","Brazil","Turkey","South Africa","Mexico","Australia","United Kingdom","Italy"],"orientation":"h","type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data_2021 <span class="ot">&lt;-</span> Co2_emission <span class="sc">%&gt;%</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2021</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">replace</span>(<span class="fu">is.na</span>(.), <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Total)) <span class="sc">%&gt;%</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">7</span>)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>data_melted <span class="ot">&lt;-</span> <span class="fu">melt</span>(data_2021, <span class="at">id.vars =</span> <span class="fu">c</span>(<span class="st">"Country"</span>, <span class="st">"ISO.3166.1.alpha.3"</span>, <span class="st">"Year"</span>, <span class="st">"Total"</span>), </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                    <span class="at">variable.name =</span> <span class="st">"Fuel_Type"</span>, <span class="at">value.name =</span> <span class="st">"Emissions"</span>)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>data_melted <span class="ot">&lt;-</span> data_melted <span class="sc">%&gt;%</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Country) <span class="sc">%&gt;%</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Percentage =</span> Emissions <span class="sc">/</span> <span class="fu">sum</span>(Emissions) <span class="sc">*</span> <span class="dv">100</span>)</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>percentage_plot <span class="ot">&lt;-</span> <span class="fu">plot_ly</span>(<span class="at">data =</span> data_melted, <span class="at">x =</span> <span class="sc">~</span>Country, <span class="at">y =</span> <span class="sc">~</span>Percentage, <span class="at">type =</span> <span class="st">'bar'</span>, <span class="at">color =</span> <span class="sc">~</span>Fuel_Type,</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>                           <span class="at">text =</span> <span class="sc">~</span><span class="fu">paste0</span>(<span class="fu">round</span>(Percentage, <span class="dv">1</span>), <span class="st">"%"</span>), <span class="at">textposition =</span> <span class="st">'auto'</span>,</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                           <span class="at">hoverinfo =</span> <span class="st">'text+x+y'</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">title =</span> <span class="st">"Percentage of Emissions by Fuel Type in Top 7 Countries (2021)"</span>, </span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Country"</span>), </span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>         <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Percentage (%)"</span>),</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>         <span class="at">barmode =</span> <span class="st">'stack'</span>)</span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>percentage_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>data_2021 <span class="ot">&lt;-</span> Co2_emission <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2021</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">replace</span>(<span class="fu">is.na</span>(.), <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Total)) <span class="sc">%&gt;%</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">7</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>data_melted <span class="ot">&lt;-</span> <span class="fu">melt</span>(data_2021, <span class="at">id.vars =</span> <span class="fu">c</span>(<span class="st">"Country"</span>, <span class="st">"ISO.3166.1.alpha.3"</span>, <span class="st">"Year"</span>, <span class="st">"Total"</span>), </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>                    <span class="at">variable.name =</span> <span class="st">"Fuel_Type"</span>, <span class="at">value.name =</span> <span class="st">"Emissions"</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>data_melted <span class="ot">&lt;-</span> data_melted <span class="sc">%&gt;%</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Country) <span class="sc">%&gt;%</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Percentage =</span> Emissions <span class="sc">/</span> <span class="fu">sum</span>(Emissions) <span class="sc">*</span> <span class="dv">100</span>)</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>percentage_plot <span class="ot">&lt;-</span> <span class="fu">plot_ly</span>(<span class="at">data =</span> data_melted, <span class="at">x =</span> <span class="sc">~</span>Country, <span class="at">y =</span> <span class="sc">~</span>Percentage, <span class="at">type =</span> <span class="st">'bar'</span>, <span class="at">color =</span> <span class="sc">~</span>Fuel_Type,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>                           <span class="at">text =</span> <span class="sc">~</span><span class="fu">paste0</span>(<span class="fu">round</span>(Percentage, <span class="dv">1</span>), <span class="st">"%"</span>), <span class="at">textposition =</span> <span class="st">'auto'</span>,</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>                           <span class="at">hoverinfo =</span> <span class="st">'text+x+y'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">title =</span> <span class="st">"Percentage of Emissions by Fuel Type in Top 7 Countries (2021)"</span>, </span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Country"</span>), </span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>         <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Percentage (%)"</span>),</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>         <span class="at">barmode =</span> <span class="st">'stack'</span>)</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>percentage_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-cfe19b8a74045b19ab61" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-cfe19b8a74045b19ab61">{"x":{"visdat":{"3e505a672470":["function () ","plotlyVisDat"]},"cur_data":"3e505a672470","attrs":{"3e505a672470":{"x":{},"y":{},"text":{},"textposition":"auto","hoverinfo":"text+x+y","color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Percentage of Emissions by Fuel Type in Top 7 Countries (2021)","xaxis":{"domain":[0,1],"automargin":true,"title":"Country","type":"category","categoryorder":"array","categoryarray":["China","Global","India","International Transport","Japan","Russia","USA"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Percentage (%)"},"barmode":"stack","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[40.345234282346027,69.300504212412605,19.95741056273858,66.466518135870871,21.510366803978471,38.925134194175186,0],"text":["40.3%","69.3%","20%","66.5%","21.5%","38.9%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Coal","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[31.881560181138273,14.924024900514329,44.478129125573815,22.943875272907043,22.803230051645407,36.744661038551776,100],"text":["31.9%","14.9%","44.5%","22.9%","22.8%","36.7%","100%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Oil","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[21.336224391450752,6.7407499467507712,32.596078137161669,4.9214626859771409,49.503788156592705,20.588517828672131,0],"text":["21.3%","6.7%","32.6%","4.9%","49.5%","20.6%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Gas","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[4.5048692717455241,7.4297083738910183,0.82042092420674029,5.4949389742575301,1.2401137164315996,2.2109349505061355,0],"text":["4.5%","7.4%","0.8%","5.5%","1.2%","2.2%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Cement","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"textfont":{"color":"rgba(231,138,195,1)"},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[1.1218472839329703,0.04074310934109409,1.3477050765717677,0.10221061714076295,3.3333475518662095,0.032020489901534124,0],"text":["1.1%","0%","1.3%","0.1%","3.3%","0%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Flaring","marker":{"color":"rgba(166,216,84,1)","line":{"color":"rgba(166,216,84,1)"}},"textfont":{"color":"rgba(166,216,84,1)"},"error_y":{"color":"rgba(166,216,84,1)"},"error_x":{"color":"rgba(166,216,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[0.79762283593240901,1.4941871380941067,0.5043961103556267,0,0.92470390735013896,0.70263259462147054,0],"text":["0.8%","1.5%","0.5%","0%","0.9%","0.7%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Other","marker":{"color":"rgba(255,217,47,1)","line":{"color":"rgba(255,217,47,1)"}},"textfont":{"color":"rgba(255,217,47,1)"},"error_y":{"color":"rgba(255,217,47,1)"},"error_x":{"color":"rgba(255,217,47,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[0.012641753454034461,0.070082318996075171,0.29586006339180537,0.070994313846637944,0.68444981213546574,0.79609890357176627,0],"text":["0%","0.1%","0.3%","0.1%","0.7%","0.8%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Per.Capita","marker":{"color":"rgba(229,196,148,1)","line":{"color":"rgba(229,196,148,1)"}},"textfont":{"color":"rgba(229,196,148,1)"},"error_y":{"color":"rgba(229,196,148,1)"},"error_x":{"color":"rgba(229,196,148,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-e7f4f6e40a22a83bb3c0" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-e7f4f6e40a22a83bb3c0">{"x":{"visdat":{"372439e34ebf":["function () ","plotlyVisDat"]},"cur_data":"372439e34ebf","attrs":{"372439e34ebf":{"x":{},"y":{},"text":{},"textposition":"auto","hoverinfo":"text+x+y","color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Percentage of Emissions by Fuel Type in Top 7 Countries (2021)","xaxis":{"domain":[0,1],"automargin":true,"title":"Country","type":"category","categoryorder":"array","categoryarray":["China","Global","India","International Transport","Japan","Russia","USA"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Percentage (%)"},"barmode":"stack","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[40.345234282346027,69.300504212412605,19.95741056273858,66.466518135870871,21.510366803978471,38.925134194175186,0],"text":["40.3%","69.3%","20%","66.5%","21.5%","38.9%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Coal","marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)"}},"textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[31.881560181138273,14.924024900514329,44.478129125573815,22.943875272907043,22.803230051645407,36.744661038551776,100],"text":["31.9%","14.9%","44.5%","22.9%","22.8%","36.7%","100%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Oil","marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)"}},"textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[21.336224391450752,6.7407499467507712,32.596078137161669,4.9214626859771409,49.503788156592705,20.588517828672131,0],"text":["21.3%","6.7%","32.6%","4.9%","49.5%","20.6%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Gas","marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)"}},"textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[4.5048692717455241,7.4297083738910183,0.82042092420674029,5.4949389742575301,1.2401137164315996,2.2109349505061355,0],"text":["4.5%","7.4%","0.8%","5.5%","1.2%","2.2%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Cement","marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)"}},"textfont":{"color":"rgba(231,138,195,1)"},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[1.1218472839329703,0.04074310934109409,1.3477050765717677,0.10221061714076295,3.3333475518662095,0.032020489901534124,0],"text":["1.1%","0%","1.3%","0.1%","3.3%","0%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Flaring","marker":{"color":"rgba(166,216,84,1)","line":{"color":"rgba(166,216,84,1)"}},"textfont":{"color":"rgba(166,216,84,1)"},"error_y":{"color":"rgba(166,216,84,1)"},"error_x":{"color":"rgba(166,216,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[0.79762283593240901,1.4941871380941067,0.5043961103556267,0,0.92470390735013896,0.70263259462147054,0],"text":["0.8%","1.5%","0.5%","0%","0.9%","0.7%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Other","marker":{"color":"rgba(255,217,47,1)","line":{"color":"rgba(255,217,47,1)"}},"textfont":{"color":"rgba(255,217,47,1)"},"error_y":{"color":"rgba(255,217,47,1)"},"error_x":{"color":"rgba(255,217,47,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[0.012641753454034461,0.070082318996075171,0.29586006339180537,0.070994313846637944,0.68444981213546574,0.79609890357176627,0],"text":["0%","0.1%","0.3%","0.1%","0.7%","0.8%","0%"],"textposition":["auto","auto","auto","auto","auto","auto","auto"],"hoverinfo":["text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y","text+x+y"],"type":"bar","name":"Per.Capita","marker":{"color":"rgba(229,196,148,1)","line":{"color":"rgba(229,196,148,1)"}},"textfont":{"color":"rgba(229,196,148,1)"},"error_y":{"color":"rgba(229,196,148,1)"},"error_x":{"color":"rgba(229,196,148,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">plot_ly</span>(<span class="at">data =</span> data_melted, <span class="at">x =</span> <span class="sc">~</span>Country, <span class="at">y =</span> <span class="sc">~</span>Emissions, <span class="at">color =</span> <span class="sc">~</span>Fuel_Type, <span class="at">type =</span> <span class="st">'bar'</span>, </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">marker =</span> <span class="fu">list</span>(<span class="at">line =</span> <span class="fu">list</span>(<span class="at">width =</span> <span class="dv">1</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">title =</span> <span class="st">"Emissions by Fuel Type in Top 7 Countries (2021)"</span>, </span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Country"</span>), </span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Emissions (MtCO2)"</span>),</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">barmode =</span> <span class="st">'group'</span>,</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">showlegend =</span> <span class="cn">TRUE</span> </span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>         ,</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">transforms =</span> <span class="fu">list</span>(</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>           <span class="fu">list</span>(</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">type =</span> <span class="st">'groupby'</span>,</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">groups =</span> <span class="sc">~</span>Fuel_Type</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>           )</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>         )</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">plot_ly</span>(<span class="at">data =</span> data_melted, <span class="at">x =</span> <span class="sc">~</span>Country, <span class="at">y =</span> <span class="sc">~</span>Emissions, <span class="at">color =</span> <span class="sc">~</span>Fuel_Type, <span class="at">type =</span> <span class="st">'bar'</span>, </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">marker =</span> <span class="fu">list</span>(<span class="at">line =</span> <span class="fu">list</span>(<span class="at">width =</span> <span class="dv">1</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">title =</span> <span class="st">"Emissions by Fuel Type in Top 7 Countries (2021)"</span>, </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Country"</span>), </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Emissions (MtCO2)"</span>),</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">barmode =</span> <span class="st">'group'</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">showlegend =</span> <span class="cn">TRUE</span> </span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>         ,</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">transforms =</span> <span class="fu">list</span>(</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>           <span class="fu">list</span>(</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>             <span class="at">type =</span> <span class="st">'groupby'</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">groups =</span> <span class="sc">~</span>Fuel_Type</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>           )</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>         )</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: 'layout' objects don't have these attributes: 'transforms'
 Valid attributes include:
 '_deprecated', 'activeshape', 'annotations', 'autosize', 'autotypenumbers', 'calendar', 'clickmode', 'coloraxis', 'colorscale', 'colorway', 'computed', 'datarevision', 'dragmode', 'editrevision', 'editType', 'font', 'geo', 'grid', 'height', 'hidesources', 'hoverdistance', 'hoverlabel', 'hovermode', 'images', 'legend', 'mapbox', 'margin', 'meta', 'metasrc', 'modebar', 'newshape', 'paper_bgcolor', 'plot_bgcolor', 'polar', 'scene', 'selectdirection', 'selectionrevision', 'separators', 'shapes', 'showlegend', 'sliders', 'smith', 'spikedistance', 'template', 'ternary', 'title', 'transition', 'uirevision', 'uniformtext', 'updatemenus', 'width', 'xaxis', 'yaxis', 'barmode', 'bargap', 'mapType'</code></pre>
 </div>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-4f67d79b1f100cf67d2c" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-4f67d79b1f100cf67d2c">{"x":{"visdat":{"3e504bb964e4":["function () ","plotlyVisDat"]},"cur_data":"3e504bb964e4","attrs":{"3e504bb964e4":{"x":{},"y":{},"marker":{"line":{"width":1}},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Emissions by Fuel Type in Top 7 Countries (2021)","xaxis":{"domain":[0,1],"automargin":true,"title":"Country","type":"category","categoryorder":"array","categoryarray":["China","Global","India","International Transport","Japan","Russia","USA"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Emissions (MtCO2)"},"barmode":"group","showlegend":true,"transforms":[{"type":"groupby","groups":["Coal","Coal","Coal","Coal","Coal","Coal","Coal","Oil","Oil","Oil","Oil","Oil","Oil","Oil","Gas","Gas","Gas","Gas","Gas","Gas","Gas","Cement","Cement","Cement","Cement","Cement","Cement","Cement","Flaring","Flaring","Flaring","Flaring","Flaring","Flaring","Flaring","Other","Other","Other","Other","Other","Other","Other","Per.Capita","Per.Capita","Per.Capita","Per.Capita","Per.Capita","Per.Capita","Per.Capita"]}],"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[14979.598083000001,7955.9854189999996,1002.299987,1802.311897,380.227147,418.82049899999998,0],"marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)","width":1}},"type":"bar","name":"Coal","textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[11837.159116000001,1713.33998,2233.7781799999998,622.14812099999995,403.08039300000002,395.35938900000002,1021.749204],"marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)","width":1}},"type":"bar","name":"Oil","textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[7921.8294720000004,773.86606200000006,1637.038462,133.45081099999999,875.05175099999997,221.52507600000001,0],"marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)","width":1}},"type":"bar","name":"Gas","textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[1672.5923720000001,852.96134800000004,41.203135000000003,149.00124400000001,21.920821,23.788868000000001,0],"marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)","width":1}},"type":"bar","name":"Cement","textfont":{"color":"rgba(231,138,195,1)"},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[416.52556299999998,4.6774779999999998,67.684370999999999,2.7715519999999998,58.921785999999997,0.34452899999999997,0],"marker":{"color":"rgba(166,216,84,1)","line":{"color":"rgba(166,216,84,1)","width":1}},"type":"bar","name":"Flaring","textfont":{"color":"rgba(166,216,84,1)"},"error_y":{"color":"rgba(166,216,84,1)"},"error_x":{"color":"rgba(166,216,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[296.14574599999997,171.538883,25.331754,0,16.345492,7.5600750000000003,0],"marker":{"color":"rgba(255,217,47,1)","line":{"color":"rgba(255,217,47,1)","width":1}},"type":"bar","name":"Other","textfont":{"color":"rgba(255,217,47,1)"},"error_y":{"color":"rgba(255,217,47,1)"},"error_x":{"color":"rgba(255,217,47,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[4.6936989999999996,8.0457409999999996,14.858668,1.9250879999999999,12.098649999999999,8.5657390000000007,0],"marker":{"color":"rgba(229,196,148,1)","line":{"color":"rgba(229,196,148,1)","width":1}},"type":"bar","name":"Per.Capita","textfont":{"color":"rgba(229,196,148,1)"},"error_y":{"color":"rgba(229,196,148,1)"},"error_x":{"color":"rgba(229,196,148,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-f5a1797af405b6b71516" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-f5a1797af405b6b71516">{"x":{"visdat":{"372453b4498c":["function () ","plotlyVisDat"]},"cur_data":"372453b4498c","attrs":{"372453b4498c":{"x":{},"y":{},"marker":{"line":{"width":1}},"color":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Emissions by Fuel Type in Top 7 Countries (2021)","xaxis":{"domain":[0,1],"automargin":true,"title":"Country","type":"category","categoryorder":"array","categoryarray":["China","Global","India","International Transport","Japan","Russia","USA"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Emissions (MtCO2)"},"barmode":"group","showlegend":true,"transforms":[{"type":"groupby","groups":["Coal","Coal","Coal","Coal","Coal","Coal","Coal","Oil","Oil","Oil","Oil","Oil","Oil","Oil","Gas","Gas","Gas","Gas","Gas","Gas","Gas","Cement","Cement","Cement","Cement","Cement","Cement","Cement","Flaring","Flaring","Flaring","Flaring","Flaring","Flaring","Flaring","Other","Other","Other","Other","Other","Other","Other","Per.Capita","Per.Capita","Per.Capita","Per.Capita","Per.Capita","Per.Capita","Per.Capita"]}],"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[14979.598083000001,7955.9854189999996,1002.299987,1802.311897,380.227147,418.82049899999998,0],"marker":{"color":"rgba(102,194,165,1)","line":{"color":"rgba(102,194,165,1)","width":1}},"type":"bar","name":"Coal","textfont":{"color":"rgba(102,194,165,1)"},"error_y":{"color":"rgba(102,194,165,1)"},"error_x":{"color":"rgba(102,194,165,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[11837.159116000001,1713.33998,2233.7781799999998,622.14812099999995,403.08039300000002,395.35938900000002,1021.749204],"marker":{"color":"rgba(252,141,98,1)","line":{"color":"rgba(252,141,98,1)","width":1}},"type":"bar","name":"Oil","textfont":{"color":"rgba(252,141,98,1)"},"error_y":{"color":"rgba(252,141,98,1)"},"error_x":{"color":"rgba(252,141,98,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[7921.8294720000004,773.86606200000006,1637.038462,133.45081099999999,875.05175099999997,221.52507600000001,0],"marker":{"color":"rgba(141,160,203,1)","line":{"color":"rgba(141,160,203,1)","width":1}},"type":"bar","name":"Gas","textfont":{"color":"rgba(141,160,203,1)"},"error_y":{"color":"rgba(141,160,203,1)"},"error_x":{"color":"rgba(141,160,203,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[1672.5923720000001,852.96134800000004,41.203135000000003,149.00124400000001,21.920821,23.788868000000001,0],"marker":{"color":"rgba(231,138,195,1)","line":{"color":"rgba(231,138,195,1)","width":1}},"type":"bar","name":"Cement","textfont":{"color":"rgba(231,138,195,1)"},"error_y":{"color":"rgba(231,138,195,1)"},"error_x":{"color":"rgba(231,138,195,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[416.52556299999998,4.6774779999999998,67.684370999999999,2.7715519999999998,58.921785999999997,0.34452899999999997,0],"marker":{"color":"rgba(166,216,84,1)","line":{"color":"rgba(166,216,84,1)","width":1}},"type":"bar","name":"Flaring","textfont":{"color":"rgba(166,216,84,1)"},"error_y":{"color":"rgba(166,216,84,1)"},"error_x":{"color":"rgba(166,216,84,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[296.14574599999997,171.538883,25.331754,0,16.345492,7.5600750000000003,0],"marker":{"color":"rgba(255,217,47,1)","line":{"color":"rgba(255,217,47,1)","width":1}},"type":"bar","name":"Other","textfont":{"color":"rgba(255,217,47,1)"},"error_y":{"color":"rgba(255,217,47,1)"},"error_x":{"color":"rgba(255,217,47,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["Global","China","USA","India","Russia","Japan","International Transport"],"y":[4.6936989999999996,8.0457409999999996,14.858668,1.9250879999999999,12.098649999999999,8.5657390000000007,0],"marker":{"color":"rgba(229,196,148,1)","line":{"color":"rgba(229,196,148,1)","width":1}},"type":"bar","name":"Per.Capita","textfont":{"color":"rgba(229,196,148,1)"},"error_y":{"color":"rgba(229,196,148,1)"},"error_x":{"color":"rgba(229,196,148,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -391,10 +425,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -404,8 +455,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -417,7 +477,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -461,6 +644,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -486,6 +670,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -546,6 +756,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

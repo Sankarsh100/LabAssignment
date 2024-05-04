@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.text-highlight {
+    background-color: yellow;
+}
+
+/* Style for your data visualizations */
+.data-visualization {
+    border: 2px solid #666;
+    padding: 10px;
+    margin-top: 20px;
+}

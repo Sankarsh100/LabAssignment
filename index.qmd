@@ -1,5 +1,5 @@
 ---
-title: "Sankarsh Govind Sanap"
+title: "About"
 format: html
 editor: visual
 image: sankarsh.jpg
@@ -13,10 +13,10 @@ about:
        icon: github
        href: https://github.com/Sankarsh100
      - text: Resume       
-       icon: file-text       
+       icon: file-text 
 ---
 
-Welcome to my corner of the digital realm!
+## Welcome to my corner of the digital realm! {#sec-welcome-to-my-corner-of-the-digital-realm style="color:gray"}
 
 I'm Sankarsh Govind Sanap, a passionate individual with a relentless drive to harness the power of data for transformative insights and innovation.
 

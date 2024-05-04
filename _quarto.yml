@@ -11,12 +11,25 @@ website:
       - about.qmd
       - Dummy01.qmd
       - Mid_Project.qmd
+    right:
+    - text: "Projects"
+      href: "#projects"
+    - text: "Blog"
+      href: "#blog"
+    - text: "Contact"
+      href: "#contact"
+      
+
       
 format:
   html:
     theme: sandstone
     css: styles.css
     toc: true
+    
+settings:
+  responsive: true
+
 
 editor: visual
 

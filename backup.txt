@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Sankarsh Govind Sanap"
+  image: sankarsh.jpg
+  navbar:
+    left:
+      - href: index.qmd
+      - about.qmd
+      - Dummy01.qmd
+      - Mid_Project.qmd
+      
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
+
+editor: visual
+

@@ -2,13 +2,18 @@
 title: "Mid Project"
 format: html
 editor: visual
+style: Styles.css
 ---
 
-# **GROUP 2**
+# **##GROUP 2**
 
-**Rushikesh Shivajirao Ware (G01477377)**
+---
 
-**Sankarsh Govind Sanap (G01477371)**
+**\*\*Rushikesh Shivajirao Ware (G01477377)**\*\*
+
+**\*\*Sankarsh Govind Sanap (G01477371)**\*\*
+
+---
 
 **PRESENTATION**
 
@@ -18,5 +23,5 @@ Presentation: [link](https://docs.google.com/presentation/d/1dDDvX0Tom2OBCriw2d0
 
 R script: [Link](https://drive.google.com/file/d/154Tgqq9TEZ5Qd85WJ_oEKWGoizJ9cdKp/view?usp=sharing)
 
-```{}
+```         
 ```
